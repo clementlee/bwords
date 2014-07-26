@@ -15,5 +15,9 @@ body.pace-done > #mainbody {
     -webkit-transition:all 1s;
     -moz-transition:all 1s; 
     -o-transition:all 1s; 
-    transition:all 1s}
+    transition:all 1s;
+}
+
+#jumbologo {
+    width:300px;
 }
