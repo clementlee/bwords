@@ -10,5 +10,5 @@ def filter(word):
 
 with open('words.txt', 'rb') as unfiltered:
     with open('filtered_words.txt', 'wb') as filtered:
-        filtered.writelines((i for i in unfiltered if filter(i)))
+        filtered.writelines(set((i for i in unfiltered if filter(i))))
 
