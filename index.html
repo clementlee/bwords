@@ -1,4 +1,4 @@
-<html>
+<html ng-app>
     <head>
         <script src="/js/pace.js"></script>
         <link href="/css/pace.css" rel="stylesheet" />
@@ -13,18 +13,47 @@
 
     </head>
     <body>
-        <div id="mainbody">
-            <nav>
-
-            </nav>
-            <div class="jumbotron">
-                <div class="container">
-                    <img class="img-responsive" id="jumbologo" src="img/logo.jpg">
+        <div id="mainbody" class="ng-cloak">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!--<span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>-->
+                        <span style="display:inline-block; vertical-align:middle;"><i
+                                class="fa fa-bars fa-lg"></i></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Team Liquid BWords Hyper Visualizer-tron 9000</a>
                 </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-class="{active: !show}" ng-click="show=false"><a><i class="fa fa-home"></i> Home</a></li>
+                        <li ng-class="{active: show}" ng-click="show=true"><a><i class="fa fa-play-circle"></i> Demo</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            </nav>
+            <div class="homepage" ng-show="!show">
+                <div class="container theme-showcase">
+                    <div class="jumbotron">
+                        <img class="img-responsive" id="jumbologo" src="img/logo.jpg">
+                        <h1> Liquid|BWords</h1>
+                        Here's a test: 1 + 2 = {{1+2}}
+                    </div>
+                </div>
+            </div>
+            <div class="procapp" ng-show="show">
+                
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/processor.js"></script>
     </body>
 </html>
