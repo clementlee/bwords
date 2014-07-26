@@ -12,7 +12,9 @@ function getworth(word) {
     var i = 0;
     var max = word.length;
     while(i < max) {
+        if (word.charAt(i) in letterdict) {
         total += letterdict[word.charAt(i)][0];
+        }
         i++;
     }
     if(max == 7) {
@@ -137,7 +139,7 @@ var loaded = 0;
 $.get('data/filtered_words.txt', function(data) {
     loaded++;
 
-    wordlist = data.split('\r\n');
+    wordlist = data.split('\n');
     if(loaded == 2) {
         processloaded();
     }
