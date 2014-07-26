@@ -138,7 +138,7 @@ var loaded = 0;
 $.get('data/filtered_words.txt', function(data) {
     loaded++;
 
-    wordlist = data.split('\r\n');
+    wordlist = data.split('\n');
     if(loaded == 2) {
         processloaded();
     }
