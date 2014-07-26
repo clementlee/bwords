@@ -12,7 +12,7 @@ cloud = {
   
 		d3.layout.cloud().size([options.width, options.height])
 		.words(options.words)
-		.rotate(function(d) { return ~~(Math.random() * 5) * 27 - 45; })
+		.rotate(function(d) { return /*~~(Math.random() * 5) * 27 - 45;*/ ~~(Math.random() * 2) * 90; })
 		.font(options.font)
 		.fontSize(function(d) { return d.size; })
 		.on("end", function(words) {
