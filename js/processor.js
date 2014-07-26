@@ -85,6 +85,7 @@ function search(event) {
         }
     }
     $('#selectwordlist').html(html.join(' '));
+    $('#wordprob').text(getprob(text));
     $('#uniev').text(unival(text, searchlist).toFixed(3));
     $('#unisize').text(searchlist.length);
     $('#wordworth').text(getworth(text));

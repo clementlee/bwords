@@ -22,6 +22,9 @@ body.pace-done > #mainbody {
     min-height:600px;
 }
 
+body * {
+    font-size:18px;
+}
 
 .jumbotron {
     overflow:hidden;
