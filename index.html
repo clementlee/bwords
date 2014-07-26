@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="mainbody" class="ng-cloak">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -42,18 +42,80 @@
                 <div class="container theme-showcase">
                     <div class="jumbotron">
                         <img class="img-responsive" id="jumbologo" src="img/logo.jpg">
-                        <h1> Liquid|BWords</h1>
-                        Here's a test: 1 + 2 = {{1+2}}
+                        <h1> Liquid|BWords</h1><br><br>
+                        <h2 style="font-weight:100"> Loading Universe... <i class="fa fa-circle-o-notch fa-spin"></i></h2>
                     </div>
                 </div>
             </div>
-            <div class="procapp" ng-show="show">
-                
+            <div class="container procapp" ng-show="show"> 
+                <!--<div id="vis">
+                </div>
+                <div class="panel panel-info wordlist">
+                    <div class="panel-heading">List of words:</div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <tbody id="wordlisttable" style="overflow-y:scroll;height:300px;">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                                    <input class="form-control searchform" type="text" style="text-align:center;" maxlength="7">
+                                    <div class="input-group-addon">(max 7 char)</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Candidate Words:</div>
+                            <div class="panel-body">
+                                <select class="form-control" id="selectwordlist" name="candidatewords" size="10"style=" padding: 0px 0px;">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Word Statistics</div>
+                            <div class="panel-body" id="wordstats">
+                                Worth of typed word: <span id='wordworth'></span><br>
+                                Worth of selected word: <span id='selworth'></span><br>
+                                P(selected word | typed word): <span id='selprob'></span><br>
+                                Expected value of selected word: <span id='selev'></span><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Universe Statistics</div>
+                            <div class="panel-body" id="unistats">
+                                Expected value of word universe: <span id='uniev'></span><br>
+                                Number of words in universe: <span id='unisize'></span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="wordcloud" style="margin:0 auto;">
+                    </div>
+                </div>
             </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+        <script src="js/d3.layout.cloud.js"></script>
+        <script src="js/d3.cloud.simplified.js"></script>
+        <script src="js/underscore-min.js"></script>
         <script src="js/processor.js"></script>
     </body>
 </html>

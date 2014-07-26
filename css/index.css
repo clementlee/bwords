@@ -19,7 +19,9 @@ body.pace-done > #mainbody {
     -moz-transition:all 1s; 
     -o-transition:all 1s; 
     transition:all 1s;
+    min-height:600px;
 }
+
 
 .jumbotron {
     overflow:hidden;
@@ -32,9 +34,20 @@ body.pace-done > #mainbody {
 }
 
 .homepage {
-    padding-top: 75px;
+    /*padding-top: 75px;*/
 }
 
 .procapp {
-    margin-top:50px;
+    /*padding-top:50px;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;*/
+    
+}
+
+.wordlist {
+    width:300px;
 }
